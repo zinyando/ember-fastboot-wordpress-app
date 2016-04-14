@@ -1,0 +1,21 @@
+<h2>{{{article.title}}}</h2>
+<time>Date: {{article.date}}</time>
+<pre>Article id: {{article.id}}</pre>
+
+{{{article.content}}}
+
+<h3>Categories</h3>
+<ul>
+    {{#each article.categories as |category|}}
+        <li>{{category.name}}</li>
+    {{/each}}
+</ul>
+
+<h3>Tags</h3>
+<ul>
+    {{#each article.tags as |tag|}}
+        <li>{{link-to tag.name 'tag' tag}}</li>
+    {{/each}}
+</ul>
+
+{{outlet}}

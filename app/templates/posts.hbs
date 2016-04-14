@@ -1,0 +1,10 @@
+<h2 id="title">Ember fastboot with Wordpress backend</h2>
+
+<p>These are the latests <em>post</em> models from a test Wordpress installation.</p>
+<ul>
+	{{#each model as |post|}}
+		<li>{{link-to post.title 'post' post}}</li>
+	{{/each}}
+</ul>
+
+{{outlet}}
